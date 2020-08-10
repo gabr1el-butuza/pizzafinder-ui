@@ -1,0 +1,398 @@
+* {   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 18px;
+}
+
+textarea {
+    margin-bottom:15px;
+    margin-top:5px;
+    height: 100px;
+    width:250px;
+    min-height: 30px;
+}
+
+.picture{
+    height: 200px;
+    width: 200px;
+    display: block;
+}
+
+.inputSelectComponent{
+    margin-bottom:15px;
+    margin-top:5px;
+    width:280px;
+    cursor: pointer;
+}
+
+body {
+    margin: 0px;
+}
+
+.header {
+    background-color: #5F9EA0;
+    padding-top: 1px;
+    padding-bottom: 47px;
+}
+
+.header-left {
+  float: left;
+}
+.header input[type=text] {
+    width: 200px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    margin-left: 10px;
+    padding: 6px;
+    min-height: 30px;
+}
+
+.elem_list{
+    list-style-type: none;
+}
+
+#pizzaList li:hover{
+    background-color: #5F9EA0;
+    color: white;
+    height: 26px;
+}
+
+li{
+    padding: 8px;
+    border-bottom: solid 1px #cccccc;
+}
+
+ul{
+    padding: 0px;
+    margin-top: 0px;
+}
+
+.border_hg{
+    position: absolute;
+    border-style: ridge;
+    top: 70px;
+    margin-left: 5px;
+    margin-bottom: 2px;
+    width: 260px;
+    bottom: 20px;
+    overflow: auto;
+}
+
+.input{
+    background-color: #d6d6c2;
+    width: 100px;
+    border-color: #000000;
+    margin-bottom: 15px;
+    cursor: pointer;
+}
+
+.inputfile {
+  /* visibility: hidden etc. wont work */
+  weight: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: -1;
+}
+.inputfile:focus + label {
+  /* keyboard navigation */
+  outline: 1px dotted #000;
+  outline: -webkit-focus-ring-color auto 5px;
+}
+.inputfile + label * {
+  pointer-events: none;
+}
+
+form {
+    position: absolute;
+    top: 70px;
+    left:300px;
+    border-style: ridge;
+    width:330px;
+    padding: 10px;
+    bottom: 20px;
+    overflow: auto;
+}
+
+form input {
+    margin-bottom:15px;
+    margin-top:5px;
+    width:280px;
+}
+
+label {
+    display:block;
+}
+
+#map {
+    position: absolute;
+    bottom: 20px;
+    top: 70px;
+    left: 680px;
+    color: black;
+    border-style: ridge;
+    right: 5px;
+
+}
+
+#myCheckbox{
+    display: none;
+}
+
+.icon {
+    width: 20px;
+    height: 20px;
+    float: right;
+}
+
+/* Sort icon  style */
+.sort {
+    background-color: #5F9EA0;
+    height: 40px;
+}
+
+#sortIcon {
+    display: block;
+    height: 30px;
+    width: 20px;
+    padding-top: 5px;
+    padding-right: 10px;
+    cursor: pointer;
+}
+
+ul#iconClass {
+    list-style-type: none;
+    text-decoration: none;
+    padding: 0;
+    height: 20px;
+    overflow: hidden;
+    margin-right: 50px;
+}
+
+ul#iconClass li {
+    border: none;
+    padding: 0;
+    float: right;
+}
+
+ul#iconClass li:hover {
+    background-color: transparent;
+}
+
+img.icons {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+ul#listContainer {
+    width: 160px;
+    height: 20px;
+    background-color: #eaf4fc;
+    list-style-type: none;
+    text-decoration: none;
+    margin-top: 5px;
+    border-radius: 15px;
+    margin-bottom: 30px;
+    padding: 5px;
+}
+
+ul#listContainer li {
+    border: none;
+    padding: 0;
+    float: left;
+}
+
+ul#listContainer li:hover {
+    background-color: transparent;
+}
+
+#iconLabel {
+    float: left;
+}
+
+.hidden {
+    display: none;
+}
+
+.iconStyle{
+    display: block;
+    height: 30px;
+    width: 30px;
+    padding-top: 5px;
+    padding-right: 10px;
+    padding-left: 5px;
+    padding-bottom: 5px;
+    cursor: pointer;
+  }
+
+  #show_hide_location {
+    margin-bottom: 15px;
+  }
+
+  #show_hide_location label,
+  #pizzaList li {
+    cursor:pointer;
+  }
+
+  #showLocations{
+    margin-right: 10px;
+    width: 20px;
+    height: 20px;
+    background-color: #eaf4fc;
+    border-radius: 10px;
+   cursor: pointer;
+  }
+
+  .highlightSelectedItem{
+    background-color: #5F9EA0;
+    color: white;
+  }
+
+
+  #listLocations li{
+    border-bottom: none;
+    cursor: pointer;
+}
+
+.errorName {
+  color: red;
+  font-size: 15px;
+}
+
+/*Download and Speech icons*/
+.header .iconss {
+     cursor: pointer;
+     float: left;
+     margin-top: 8px;
+     margin-left: 6px;
+ }
+.header .micStyle {
+    background-color: #eaf4fc;
+    border-radius: 12px;
+}
+ .header .iconss label {
+     display: inline;
+ }
+
+ .header .iconss img {
+     width: 27px;
+     height: 27px;
+     cursor: pointer;
+ }
+
+ /*buttons*/
+ .header .buttons {
+    color: #221111ad;
+    float: left;
+    padding-top: 5px;
+
+ }
+ .header .button {
+    padding: 6px;
+    cursor: pointer;
+ }
+
+ .header .button:hover {
+     background-color: #b7b6b6;
+     color: #221111ad;
+     transition: 2s;
+ }
+
+/*Language icons*/
+.header .languages {
+    margin-right: 5px;
+    margin-top: 5px;
+    float: right;
+}
+
+.header .languages label {
+    display: inline;
+}
+
+.header .languages img {
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+}
+
+.header img {
+    width: 27px;
+    height: 27px;
+    cursor: pointer;
+}
+
+/*Animation button*/
+.spinner {
+  margin: 10px 450px;
+  width: 50px;
+  height: 23px;
+  text-align: center;
+  font-size: 5px;
+}
+
+.spinner > div {
+  background-color: #333;
+  height: 100%;
+  width: 3px;
+  display: inline-block;
+
+  -webkit-animation: sk-stretchdelay 1.2s infinite ease-in-out;
+  animation: sk-stretchdelay 1.2s infinite ease-in-out;
+}
+
+.spinner .rect2 {
+  -webkit-animation-delay: -1.1s;
+  animation-delay: -1.1s;
+}
+
+.spinner .rect3 {
+  -webkit-animation-delay: -1.0s;
+  animation-delay: -1.0s;
+}
+
+.spinner .rect4 {
+  -webkit-animation-delay: -0.9s;
+  animation-delay: -0.9s;
+}
+
+.spinner .rect5 {
+  -webkit-animation-delay: -0.8s;
+  animation-delay: -0.8s;
+}
+
+@-webkit-keyframes sk-stretchdelay {
+  0%, 40%, 100% { -webkit-transform: scaleY(0.4) }
+  20% { -webkit-transform: scaleY(1.0) }
+}
+
+@keyframes sk-stretchdelay {
+  0%, 40%, 100% {
+    transform: scaleY(0.4);
+    -webkit-transform: scaleY(0.4);
+  }  20% {
+    transform: scaleY(1.0);
+    -webkit-transform: scaleY(1.0);
+  }
+}
+#listLocations li a {
+    color: brown;
+    text-decoration: none;
+}
+
+#listLocations li i {
+    font-size: 16px;
+    padding-left: 25px;
+    color: brown;
+}
+
+#listLocations li img {
+    width: 30px;
+    height: 30px;
+    padding-right: 5px;
+}
+
+.locs {
+    color: black;
+    text-decoration: none;
+}

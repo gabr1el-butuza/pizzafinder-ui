@@ -1,0 +1,137 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <link href="css/styles.css" rel="stylesheet">
+    <link href="css/modal.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
+    <meta http-equiv="Content-Type" content="application/json; charset=utf-8" />
+    <title>Pizza Finder</title>
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+</head>
+
+<body>
+        <div class="header">
+            <div class="header-left">
+                <div class="buttons">
+                    <input type="text" name="search" placeholder="Search" id="input">
+                    <button type="submit" class="button" id="search" data-i18n="search">Search</button>
+                    <button class="button" id="addPizzaButton" data-i18n="addPizzaButton">Add pizza</button>
+                    <img src="assets/icons/download.svg" id="btnExport" alt="download" title="Download Excel" align="leftS">
+                </div>
+                <div class="iconss" align="left">
+                    <img class="micStyle" src="assets/icons/mic-off.png" id="Mic" title="Microphone" >
+
+                </div>
+                <div class="spinner" align="left" style="display: none" id="spi">
+                    <div class="rect1"></div>
+                    <div class="rect2"></div>
+                    <div class="rect3"></div>
+                    <div class="rect4"></div>
+                    <div class="rect5"></div>
+                </div>
+            </div>
+            <div class="languages">
+                <input type="checkbox" id="ro" class="hidden radio" />
+                <label for="ro"><img src="assets/icons/ro-flag.png" alt="Romanian" id="romanian" title="Romanian" data-locale="ro" align="left"></label>
+                <input type="checkbox" id="en" class="hidden radio" />
+                <label for="en"><img src="assets/icons/en-flag-selected.png" alt="English" id="english" title="English" data-locale="en" align="left"></label>
+            </div>
+
+        </div>
+
+
+    <div class="mainArea">
+        <div class="border_hg">
+            <div class="sort">
+                <input type="checkbox" id="isVeg" class="hidden" />
+                <label for="isVeg"><img class="iconStyle" src="assets/icons/vegetarian.png" alt="Vegetarian" id="veget" title="Vegetarian" align="left"></label>
+
+                <input type="checkbox" id="isVegan" class="hidden" />
+                <label for="isVegan"><img class="iconStyle" src="assets/icons/vegan.png" alt="Vegan" id="vegan" title="Vegan" align="left"></label>
+
+                <input type="checkbox" id="isLactoVeg" class="hidden" />
+                <label for="isLactoVeg"><img class="iconStyle" src="assets/icons/lacto-veg.png" alt="LactoVeg" id="lactoVeg" title="Lacto Vegetarian" align="left"></label>
+
+                <input type="checkbox" id="isOvoVeg" class="hidden" />
+                <label for="isOvoVeg"><img class="iconStyle" src="assets/icons/ovo-veg.png" alt="OvoVeg" id="ovoVeg" title="Ovo Vegetarian" align="left"></label>
+
+                <img src="assets/icons/arrow-down.svg" alt="sort-icon" id="sortIcon" align="right"/>
+            </div>
+            <ul id="pizzaList" class="elem_list"></ul>
+        </div>
+
+        <form id="pizzaForm">
+            <label data-i18n="nameLabel">Name:</label>
+            <input type="text" name="pizzaname" id="name" class="InputSelectComponent">
+
+            <label data-i18n="picLabel">Picture:</label>
+            <img id="pic" class="picture"/><br>
+
+            <input type="file" name="file" id="file" class="inputfile" accept="image/gif, image/jpeg, image/png" />
+            <label for="file" class="input" data-i18n="selectFileLabel">Select file</label>
+
+            <label data-i18n="description">Description:</label>
+            <textarea class="minHeight" id="description"></textarea>
+
+            <label id="iconLabel" data-i18n="vegTypesLabel">Vegetarian types:</label>
+            <ul id="iconClass" class="connectedSortable1">
+                <li class="vegetarian"><img class="icons" src="assets/icons/vegetarian.png" alt="Vegetarian">
+                </li>
+                <li class="lacto-veg"><img class="icons" src="assets/icons/lacto-veg.png" alt="Lacto Vegan">
+                </li>
+                <li class="vegan"><img class="icons" src="assets/icons/vegan.png" alt="Vegan"></li>
+                <li class="ovo-veg"><img class="icons" src="assets/icons/ovo-veg.png" alt="Ovo Vegan"></li>
+            </ul>
+
+            <ul id="listContainer" class="connectedSortable2"></ul>
+
+            <label data-i18n="spiceLevelLabel">Spice level:</label>
+            <select name="selectMenu" id="spiceLevel" class="inputSelectComponent">
+            </select>
+
+            <div id="show_hide_location">
+                <img src="assets/icons/arrow-down.svg" alt="show-icon" id="showLocations" align="left" />
+                <label id="show_hide" data-i18n="showLocationsLabel">Show Locations</label>
+            </div>
+            <ul id="listLocations">
+            </ul>
+
+            <button id="btnSave" data-i18n="btnSave">Save</button>
+            <button id="btnDelete" data-i18n="btnDelete">Delete</button>
+        </form>
+    </div>
+
+    <div class="mapArea">
+        <div id="map"></div>
+    </div>
+
+    <!-- Modal HTML embedded directly into document -->
+    <div id="ex1" class="modal">
+    </div>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+    <script src="js/lib/CLDRPluralRuleParser/CLDRPluralRuleParser.js"></script>
+    <script src="js/lib/jquery.i18n/jquery.i18n.js"></script>
+    <script src="js/lib/jquery.i18n/jquery.i18n.messagestore.js"></script>
+    <script src="js/lib/jquery.i18n/jquery.i18n.fallbacks.js"></script>
+    <script src="js/lib/jquery.i18n/jquery.i18n.language.js"></script>
+    <script src="js/lib/jquery.i18n/jquery.i18n.parser.js"></script>
+    <script src="js/lib/jquery.i18n/jquery.i18n.emitter.js"></script>
+    <script src="js/lib/jquery.i18n/jquery.i18n.emitter.bidi.js"></script>
+    <script src="js/lib/history/jquery.history.js"></script>
+    <script src="js/lib/url/url.min.js"></script>
+    <script src="js/main.js" type="text/javascript"></script>
+    <script src="http://maps.google.com/maps/api/js?key=AIzaSyCwN9fy_RYsam1hBsUL5zhkLFqOzdO1C_g&libraries=places"></script>
+    <script src="js/gmaps.js"></script>
+    <script src="js/constants.js"></script>
+    <script src="js/map.js" type="text/javascript"></script>
+    <script src="js/api.js" type="text/javascript"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.2.0/js/all.js" integrity="sha384-4oV5EgaV02iISL2ban6c/RmotsABqE4yZxZLcYMAdG7FAPsyHYAPpywE9PJo+Khy" crossorigin="anonymous"></script>
+</body>
+</html>

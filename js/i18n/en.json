@@ -1,0 +1,24 @@
+{
+  "@metadata": {
+    "locale": "en"
+  },
+  "placeholder" : "Search",
+  "search" : "Search",
+  "addPizzaButton" : "Add pizza",
+  "roTitle" : "Romanian",
+  "enTitle" : "English",
+  "nameLabel" : "Name:",
+  "picLabel" : "Picture:",
+  "selectFileLabel" : "Select file",
+  "description" : "Description:",
+  "vegTypesLabel" : "Vegetarian types:",
+  "spiceLevelLabel" : "Spice level:",
+  "showLocationsLabel" : "Show locations",
+  "show_hideH" : "Hide locations",
+  "btnSave" : "Save",
+  "btnDelete" : "Delete",
+  "errExistName" : "This pizza name already exist",
+  "errVidName" : "This field is required",
+  "confirmText" : "Are you sure you want to delete this pizza?",
+  "pressCall" : "Press to call"
+}

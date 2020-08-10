@@ -1,0 +1,65 @@
+/* MODAL STYLE */
+
+#placeTitle {
+    font-family: 'Quicksand', sans-serif;
+    text-align: center;
+    font-size: 25px;
+    color: #5F9EA0;
+}
+
+/* Stim ca se repeta da nu mergea de puneam o clasa =)) */
+
+#placePhone {
+    font-family: 'Quicksand', sans-serif;
+}
+
+#placeAddress {
+    font-family: 'Quicksand', sans-serif;
+}
+
+#placeWebsite {
+    font-family: 'Quicksand', sans-serif;
+}
+
+#placeWebsite  a{
+    font-family: 'Quicksand', sans-serif;
+}
+
+#placeRating {
+    font-family: 'Quicksand', sans-serif;
+}
+
+#placeType {
+    font-family: 'Quicksand', sans-serif;
+}
+
+hr {
+    border: 0.5px solid #5F9EA0;
+}
+
+#phone {
+    text-decoration: none;
+    color: black;
+}
+
+.fa-globe {
+    color: #5F9EA0;
+}
+
+.fa-phone {
+    color: #5F9EA0;
+}
+
+.fa-map-marker-alt {
+    color: #5F9EA0;
+}
+
+.fa-star-half-alt {
+    color: #5F9EA0;
+}
+
+.fa-utensils {
+    color: #5F9EA0;
+}
+
+

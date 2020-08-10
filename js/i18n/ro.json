@@ -1,0 +1,24 @@
+{
+  "@metadata": {
+    "locale": "ro"
+  },
+  "placeholder" : "Caută",
+  "search" : "Caută",
+  "addPizzaButton" : "Adaugă pizza",
+  "roTitle" : "Română",
+  "enTitle" : "Engleză",
+  "nameLabel" : "Nume:",
+  "picLabel" : "Imagine:",
+  "selectFileLabel" : "Alege fișier",
+  "description" : "Descriere:",
+  "vegTypesLabel" : "Tipuri vegetariene:",
+  "spiceLevelLabel" : "Nivelul de picant:",
+  "showLocationsLabel" : "Arată locații",
+  "show_hideH" : "Ascunde locații",
+  "btnSave" : "Salvează",
+  "btnDelete" : "Șterge",
+  "errExistName" : "Acest nume de pizza există deja",
+  "errVidName" : "Acest câmp trebuie completat",
+  "confirmText" : "Ești sigur că vrei să ștergi această pizza?",
+  "pressCall" : "Apăsați pentru a apela"
+}
